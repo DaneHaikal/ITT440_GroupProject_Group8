@@ -15,3 +15,17 @@ except socket.error as e:
 print('Waiting for a Connection...')
 
 ServerSocket.listen(5)
+
+while True:
+
+	Client, address = ServerSocket.accept()
+
+	print('Connected to: ' + address[0]))
+
+	start_new_thread(threaded_client,(Client, ))
+
+	ThreadCount += 1
+
+	print('Thread Number: ' + str(ThreadCount))
+
+ServerSocket.close()
