@@ -27,5 +27,8 @@ while True:
 	ThreadCount += 1
 
 	print('Thread Number: ' + str(ThreadCount))
+	
+	dataFromClient = clientConnected.recv(1024)
+	print(dataFromClient.decode());
 
 ServerSocket.close()
