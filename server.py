@@ -20,7 +20,7 @@ while True:
 
 	Client, address = ServerSocket.accept()
 
-	print('Connected to: ' + address[0]))
+	print('Connected to: ' + address[0])
 
 	start_new_thread(threaded_client,(Client, ))
 
