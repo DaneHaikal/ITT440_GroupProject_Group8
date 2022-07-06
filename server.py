@@ -29,6 +29,12 @@ while True:
 	print('Thread Number: ' + str(ThreadCount))
 	
 	dataFromClient = clientConnected.recv(1024)
-	print(dataFromClient.decode());
+	hisc=open("highscore.txt","w+")
+	highscore=hisc.read()
+	highscore_in_no=int(highscore)
+	if (dataFromClient = clientConnected.recv(1024)) > highscore_in_no:
+	                hisc.write(str(dataFromClient = clientConnected.recv(1024)))
+	                highscore_in_no = dataFromClient = clientConnected.recv(1024)
+	hisc.close()
 
 ServerSocket.close()
