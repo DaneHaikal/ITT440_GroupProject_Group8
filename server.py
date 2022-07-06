@@ -20,12 +20,15 @@ while True:
 
 	Client, address = ServerSocket.accept()
 
-	print('Connected to: ' + address[0]))
+	print('Connected to: ' + address[0])
 
 	start_new_thread(threaded_client,(Client, ))
 
 	ThreadCount += 1
 
 	print('Thread Number: ' + str(ThreadCount))
+	
+	dataFromClient = clientConnected.recv(1024)
+	print(dataFromClient.decode());
 
 ServerSocket.close()
