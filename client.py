@@ -189,8 +189,8 @@ try:
 	            pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
 
 	    time.sleep(delay)
-	hisc = score;
-	clientSocket.send(hisc.encode());
+	data = score;
+	clientSocket.send(data.encode());
 
 	wn.mainloop()
 except socket.error as e:
